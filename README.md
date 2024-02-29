@@ -128,6 +128,16 @@ def max_consecutive_sum(numbers: list) -> int:
 ## Punto 5
 Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.j. entrada: `["amor", "roma", "perro"]`, salida `["amor", "roma"]`
 ### solución
+1. **Creación de un Diccionario de Anagramas:**
+- La función recorre cada palabra en la lista y la ordena alfabéticamente, creando así una forma estandarizada.
+- Se utiliza un diccionario para almacenar estas palabras ordenadas y sus correspondientes palabras originales.
+
+2. **Agrupación de Anagramas:**
+- Si una palabra ordenada ya está en el diccionario, se agrega la palabra original a la lista de anagramas asociada.
+- Si la palabra ordenada no está en el diccionario, se crea una nueva entrada con la palabra original como su primer elemento.
+
+3. **Filtrado de Anagramas:**
+    Al finalizar el proceso, la función filtra los resultados, excluyendo aquellas palabras que no tienen anagramas en la lista original.
 ```python
 def find_anagrams(words: list) -> list:
     anagrams_dict = {}
